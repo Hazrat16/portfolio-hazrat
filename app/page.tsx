@@ -413,7 +413,7 @@ export default function Home() {
               Contact Me
             </a>
             <a
-              href="/assests/CV_Hazrat_Ali.pdf"
+              href="./assests/CV_Hazrat_Ali.pdf"
               download
               className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-white/90 transition hover:text-white"
             >

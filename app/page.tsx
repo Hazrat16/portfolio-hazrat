@@ -77,25 +77,17 @@ const projects = [
   },
 ];
 
-const skills = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Redux Toolkit",
-  "Tailwind CSS",
-  "Styled-components",
-  "Chakra UI",
-  "Material UI",
-  "Express.js",
-  "MongoDB",
-  "GitHub Actions",
-];
-
 const quickFacts = [
   "Frontend architecture for production FinTech products",
   "Full-stack work with Node.js, Express, REST APIs, and real-time apps",
   "Growing into backend engineering, DevOps, and AI-assisted workflows",
+];
+
+const buildingNow = [
+  "Frontend-heavy full-stack architecture for production systems",
+  "Backend depth with scalable APIs, data modeling, and system design",
+  "DevOps maturity with CI/CD, quality gates, and deployment reliability",
+  "AI-assisted engineering workflows to increase delivery speed and quality",
 ];
 
 const techCards = [
@@ -693,6 +685,27 @@ export default function Home() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-5xl px-6 py-10 sm:px-10">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
+          <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">
+            What I&apos;m Building Now
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
+            Current focus areas
+          </h2>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            {buildingNow.map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-white/10 bg-slate-950/30 px-4 py-3 text-sm leading-7 text-brand-muted"
+              >
+                • {item}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

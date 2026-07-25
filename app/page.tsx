@@ -14,6 +14,7 @@ import {
   SiTypescript,
   SiVsco,
 } from "react-icons/si";
+import Header from "./components/Header";
 
 const experiences = [
   {
@@ -75,12 +76,6 @@ const projects = [
     stack: ["Next.js", "TypeScript", "Socket.IO", "Tailwind CSS"],
     links: { client: "", server: "", live: "" },
   },
-];
-
-const quickFacts = [
-  "Frontend architecture for production FinTech products",
-  "Full-stack work with Node.js, Express, REST APIs, and real-time apps",
-  "Growing into backend engineering, DevOps, and AI-assisted workflows",
 ];
 
 const buildingNow = [
@@ -344,78 +339,50 @@ export default function Home() {
   const rightTechCards = [techCards[1], techCards[3], techCards[5]];
 
   return (
-    <main className="relative min-h-screen bg-brand-bg text-brand-text">
+    <main className="relative min-h-screen overflow-x-hidden bg-brand-bg text-brand-text">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.18),_transparent_45%)]" />
 
-      <header className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-6 sm:px-10">
-        <a
-          href="#home"
-          className="text-sm font-semibold tracking-[0.22em] text-white/85"
-        >
-          SM HAZRAT ALI
-        </a>
-        <nav className="flex items-center gap-6 text-sm text-slate-300">
-          <a href="#home" className="transition hover:text-white">
-            Home
-          </a>
-          <a href="#about" className="transition hover:text-white">
-            About Me
-          </a>
-          <a href="#experience" className="transition hover:text-white">
-            Experience
-          </a>
-          <a href="#skills" className="transition hover:text-white">
-            Tech Stack
-          </a>
-          <a href="#projects" className="transition hover:text-white">
-            Projects
-          </a>
-          <a href="#contact" className="transition hover:text-white">
-            Contact Me
-          </a>
-        </nav>
-      </header>
+      <Header />
 
       <section
         id="home"
-        className="mx-auto w-full max-w-5xl px-6 pb-10 pt-6 sm:px-10"
+        className="mx-auto w-full max-w-5xl px-4 pb-10 pt-6 sm:px-6 sm:pt-8 md:px-10"
       >
-        <div className="flex flex-col gap-6">
-          <div className="w-fit rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-200">
+        <div className="flex flex-col gap-5 sm:gap-6">
+          <div className="w-fit max-w-full rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs leading-5 text-cyan-200 sm:px-4 sm:text-sm">
             Software Engineer • Full-Stack • DevOps • FinTech
           </div>
 
-          <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] text-white sm:text-6xl">
+          <h1 className="max-w-3xl text-[2rem] font-semibold leading-[1.1] text-white sm:text-5xl md:text-6xl">
             Full-Stack and DevOps
-            <br />
+            <br className="hidden sm:block" />{" "}
             Focused Software Engineer
           </h1>
 
-          <p className="max-w-2xl text-base leading-8 text-brand-muted sm:text-lg">
-            I&apos;m S.M. Hazrat Ali, a software engineer with 3+ years of
-            experience building production-grade web applications. My current
-            focus is full-stack engineering and DevOps, including scalable
-            backend systems, CI/CD automation, and reliable end-to-end product
-            delivery, alongside strong frontend expertise in React and Next.js.
+          <p className="max-w-2xl text-[15px] leading-7 text-brand-muted sm:text-base sm:leading-8 md:text-lg">
+            I&apos;m S.M. Hazrat Ali — a software engineer with 3+ years shipping
+            production systems in FinTech. I lead frontend architecture in React
+            and Next.js, and I build across the stack with scalable backends,
+            CI/CD automation, and reliable end-to-end delivery.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
             <a
               href="#projects"
-              className="rounded-2xl bg-white px-6 py-3 font-semibold text-slate-950 transition hover:opacity-95"
+              className="rounded-2xl bg-white px-5 py-3 text-center font-semibold text-slate-950 transition hover:opacity-95 sm:px-6"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 font-semibold text-white transition hover:border-cyan-300/40"
+              className="rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-center font-semibold text-white transition hover:border-cyan-300/40 sm:px-6"
             >
               Contact Me
             </a>
             <a
               href="./assests/CV_Hazrat_Ali.pdf"
               download
-              className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-white/90 transition hover:text-white"
+              className="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-white/90 transition hover:text-white sm:px-6"
             >
               Download CV <span aria-hidden>↓</span>
             </a>
@@ -425,59 +392,46 @@ export default function Home() {
 
       <section
         id="about"
-        className="mx-auto w-full max-w-5xl px-6 py-16 sm:px-10"
+        className="mx-auto w-full max-w-5xl px-4 py-12 sm:px-6 sm:py-16 md:px-10"
       >
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-5">
             <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">
               About Me
             </p>
-            <h2 className="mt-3 max-w-md text-3xl font-semibold text-white sm:text-4xl">
+            <h2 className="mt-3 max-w-md text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
               Product-minded full-stack engineering.
             </h2>
           </div>
 
-          <div className="lg:col-span-7 rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
-            <p className="text-[15px] leading-8 text-brand-muted">
-              I&apos;m a software engineer currently working in a production
-              FinTech environment, where I focus on scalable frontend systems,
-              high-performance user interfaces, reusable UI architecture, and
-              polished user experience. While frontend engineering is my core
-              strength, I have also worked across the stack with Node.js and
-              Express to build REST APIs and real-time applications.
+          <div className="lg:col-span-7 rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-8">
+            <p className="text-[15px] leading-7 text-brand-muted sm:leading-8">
+              I build and own production FinTech interfaces — scalable frontend
+              systems, high-performance UIs, reusable component architecture, and
+              polished user experience. Frontend is my strongest domain, and I
+              also deliver across the stack with Node.js and Express, shipping
+              REST APIs and real-time applications.
             </p>
-            <p className="mt-4 text-[15px] leading-8 text-brand-muted">
-              My current focus is expanding further into backend engineering and
-              DevOps, including scalable system design, CI/CD pipelines, and
-              infrastructure automation. I&apos;m also exploring AI-assisted
-              development workflows to improve productivity and engineering
-              efficiency, with the long-term goal of becoming a well-rounded
-              software engineer who can contribute across the stack on complex,
-              high-impact systems.
+            <p className="mt-4 text-[15px] leading-7 text-brand-muted sm:leading-8">
+              Beyond the UI layer, I deepen backend and DevOps capability —
+              system design, CI/CD pipelines, and deployment automation — so I
+              can own features end to end. I apply AI-assisted engineering to
+              move faster without compromising quality, and I take on complex,
+              high-impact work across the full stack.
             </p>
 
-            <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
-              <p className="text-sm uppercase tracking-[0.24em] text-cyan-200/80">
-                Focus
-              </p>
-              <ul className="mt-3 space-y-2 text-[15px] leading-7 text-brand-muted">
-                {quickFacts.map((fact) => (
-                  <li key={fact}>• {fact}</li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </section>
 
       <section
         id="experience"
-        className="mx-auto w-full max-w-5xl px-6 py-14 sm:px-10"
+        className="mx-auto w-full max-w-5xl px-4 py-12 sm:px-6 sm:py-14 md:px-10"
       >
         <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">
           Experience
         </p>
-        <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
+        <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
           Professional journey
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-brand-muted">
@@ -489,7 +443,7 @@ export default function Home() {
           {experiences.map((item, index) => (
             <article
               key={item.title}
-              className="grid grid-cols-[24px_1fr] items-stretch gap-4"
+              className="grid grid-cols-[16px_1fr] items-stretch gap-3 sm:grid-cols-[24px_1fr] sm:gap-4"
             >
               <div className="relative flex justify-center">
                 {index !== experiences.length - 1 ? (
@@ -500,7 +454,7 @@ export default function Home() {
                 ) : null}
                 <div
                   aria-hidden
-                  className={`mt-5 h-4 w-4 rounded-full border-2 shadow-[0_0_0_4px_rgba(34,211,238,0.12)] ${
+                  className={`mt-5 h-3.5 w-3.5 rounded-full border-2 shadow-[0_0_0_4px_rgba(34,211,238,0.12)] sm:h-4 sm:w-4 ${
                     index === 0
                       ? "border-cyan-300 bg-cyan-300"
                       : "border-cyan-300/70 bg-brand-bg"
@@ -508,16 +462,17 @@ export default function Home() {
                 />
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">
+              <div className="min-w-0 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                  <div className="min-w-0">
+                    <h3 className="text-lg font-semibold text-white sm:text-xl">
                       {item.title}
                     </h3>
                     <p className="mt-1 text-sm text-cyan-200">{item.company}</p>
                   </div>
-                  <div className="text-sm text-slate-300 sm:text-right">
-                    {item.period} • {item.location}
+                  <div className="shrink-0 text-sm text-slate-300 sm:max-w-[220px] sm:text-right">
+                    <p>{item.period}</p>
+                    <p className="mt-0.5 text-slate-400">{item.location}</p>
                   </div>
                 </div>
 
@@ -534,30 +489,30 @@ export default function Home() {
 
       <section
         id="skills"
-        className="mx-auto w-full max-w-5xl px-6 py-14 sm:px-10"
+        className="mx-auto w-full max-w-5xl px-4 py-12 sm:px-6 sm:py-14 md:px-10"
       >
         <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">
           Skills & Technologies
         </p>
-        <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
+        <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
           What I use to build and ship.
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-brand-muted">
           From frontend frameworks to backend systems, databases, DevOps, and
           engineering practices, this is the toolkit I use to build and ship.
         </p>
-        <div className="mt-8 rounded-[28px] border border-white/10 bg-white/5 p-6 backdrop-blur-md">
+        <div className="mt-8 rounded-[22px] border border-white/10 bg-white/5 p-4 backdrop-blur-md sm:rounded-[28px] sm:p-6">
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-6">
             {[leftTechCards, rightTechCards].map((column, columnIndex) => (
               <div key={columnIndex} className="space-y-4">
                 {column.map((card) => (
                   <article
                     key={card.title}
-                    className="rounded-[22px] border border-white/10 bg-brand-surface/40 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] transition hover:border-cyan-300/30"
+                    className="rounded-[22px] border border-white/10 bg-brand-surface/40 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] transition hover:border-cyan-300/30 sm:p-5"
                   >
                     <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-200/80">
+                      <div className="min-w-0">
+                        <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200/80 sm:text-sm sm:tracking-[0.22em]">
                           {card.title}
                         </h3>
                         <p className="mt-3 text-sm leading-6 text-brand-muted">
@@ -566,7 +521,7 @@ export default function Home() {
                       </div>
                       <div
                         aria-hidden
-                        className="mt-1 flex h-9 w-9 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-cyan-200/90"
+                        className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-cyan-200/90"
                       >
                         {techCardIcons[card.icon as keyof typeof techCardIcons]}
                       </div>
@@ -575,7 +530,7 @@ export default function Home() {
                       {card.tags.map((tag) => (
                         <span
                           key={tag}
-                          className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs ${tagIconColors[tag] ?? "border-cyan-400/20 bg-cyan-400/10 text-cyan-200"}`}
+                          className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs sm:px-3 ${tagIconColors[tag] ?? "border-cyan-400/20 bg-cyan-400/10 text-cyan-200"}`}
                         >
                           {tagIcons[tag]
                             ? (() => {
@@ -599,12 +554,12 @@ export default function Home() {
 
       <section
         id="projects"
-        className="mx-auto w-full max-w-5xl px-6 py-14 sm:px-10"
+        className="mx-auto w-full max-w-5xl px-4 py-12 sm:px-6 sm:py-14 md:px-10"
       >
         <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">
           Projects
         </p>
-        <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
+        <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
           Featured work
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-brand-muted">
@@ -616,9 +571,9 @@ export default function Home() {
           {projects.map((project, index) => (
             <article
               key={project.name}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-300/35"
+              className="rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-300/35 sm:p-6"
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-3">
                 <span className="text-sm text-slate-500">0{index + 1}</span>
                 <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
                   Case Study
@@ -688,12 +643,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-5xl px-6 py-10 sm:px-10">
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
+      <section className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 md:px-10">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-8">
           <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">
             What I&apos;m Building Now
           </p>
-          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
+          <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
             Current focus areas
           </h2>
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -711,31 +666,31 @@ export default function Home() {
 
       <footer
         id="contact"
-        className="mx-auto w-full max-w-5xl px-6 pb-16 sm:px-10"
+        className="mx-auto w-full max-w-5xl px-4 pb-12 sm:px-6 sm:pb-16 md:px-10"
       >
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-8">
           <p className="text-sm uppercase tracking-[0.28em] text-cyan-200/80">
             Contact Me
           </p>
-          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
+          <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
             Let&apos;s connect.
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-brand-muted">
+          <p className="mt-4 max-w-2xl text-[15px] leading-7 text-brand-muted sm:text-base sm:leading-8">
             I&apos;m open to frontend engineering roles and product-focused
             collaborations.
           </p>
 
-          <div className="mt-8 rounded-3xl border border-white/10 bg-gradient-to-br from-slate-950/40 via-slate-900/30 to-cyan-950/20 p-6 sm:p-7">
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 rounded-3xl border border-white/10 bg-gradient-to-br from-slate-950/40 via-slate-900/30 to-cyan-950/20 p-4 sm:p-7">
+            <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
               <a
                 href="mailto:hazrat17016@gmail.com"
-                className="group rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition hover:border-cyan-300/45"
+                className="group rounded-2xl border border-white/10 bg-white/5 px-4 py-4 transition hover:border-cyan-300/45 sm:px-5"
               >
                 <p className="text-xs uppercase tracking-[0.2em] text-cyan-200/80">
                   Email
                 </p>
                 <div className="mt-2 flex items-center gap-2 text-cyan-200 transition group-hover:text-cyan-100">
-                  <FaEnvelope className="h-4 w-4" aria-hidden />
+                  <FaEnvelope className="h-4 w-4 shrink-0" aria-hidden />
                   <span className="text-sm font-medium">Send an email</span>
                 </div>
               </a>
@@ -744,13 +699,13 @@ export default function Home() {
                 href="https://www.linkedin.com/in/smhazratali/"
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition hover:border-cyan-300/45"
+                className="group rounded-2xl border border-white/10 bg-white/5 px-4 py-4 transition hover:border-cyan-300/45 sm:px-5"
               >
                 <p className="text-xs uppercase tracking-[0.2em] text-cyan-200/80">
                   LinkedIn
                 </p>
                 <div className="mt-2 flex items-center gap-2 text-slate-200 transition group-hover:text-white">
-                  <FaLinkedin className="h-4 w-4" aria-hidden />
+                  <FaLinkedin className="h-4 w-4 shrink-0" aria-hidden />
                   <span className="text-sm font-medium">Open LinkedIn</span>
                 </div>
               </a>
@@ -759,13 +714,13 @@ export default function Home() {
                 href="https://wa.me/8801521334914"
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition hover:border-cyan-300/45"
+                className="group rounded-2xl border border-white/10 bg-white/5 px-4 py-4 transition hover:border-cyan-300/45 sm:px-5"
               >
                 <p className="text-xs uppercase tracking-[0.2em] text-cyan-200/80">
                   WhatsApp
                 </p>
                 <div className="mt-2 flex items-center gap-2 text-slate-200 transition group-hover:text-white">
-                  <FaWhatsapp className="h-4 w-4" aria-hidden />
+                  <FaWhatsapp className="h-4 w-4 shrink-0" aria-hidden />
                   <span className="text-sm font-medium">Chat on WhatsApp</span>
                 </div>
               </a>
@@ -774,13 +729,13 @@ export default function Home() {
                 href="https://github.com/Hazrat16"
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition hover:border-cyan-300/45"
+                className="group rounded-2xl border border-white/10 bg-white/5 px-4 py-4 transition hover:border-cyan-300/45 sm:px-5"
               >
                 <p className="text-xs uppercase tracking-[0.2em] text-cyan-200/80">
                   GitHub
                 </p>
                 <div className="mt-2 flex items-center gap-2 text-slate-200 transition group-hover:text-white">
-                  <FaGithub className="h-4 w-4" aria-hidden />
+                  <FaGithub className="h-4 w-4 shrink-0" aria-hidden />
                   <span className="text-sm font-medium">Open GitHub</span>
                 </div>
               </a>

@@ -1,15 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About Me" },
-  { href: "#experience", label: "Experience" },
-  { href: "#skills", label: "Tech Stack" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact Me" },
-];
+import { navLinks, site } from "../data";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -38,7 +30,7 @@ export default function Header() {
           className="min-w-0 shrink text-xs font-semibold tracking-[0.14em] text-white/85 sm:text-sm sm:tracking-[0.22em]"
           onClick={() => setOpen(false)}
         >
-          SM HAZRAT ALI
+          {site.brand}
         </a>
 
         <nav className="hidden items-center gap-5 text-sm text-slate-300 lg:flex xl:gap-6">

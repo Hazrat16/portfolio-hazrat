@@ -65,7 +65,7 @@ export const projectsIntro = {
 
 export const buildingNowIntro = {
   eyebrow: "What I'm Building Now",
-  title: "Current focus areas",
+  title: "Pushing further across the stack.",
 };
 
 export const contact = {

@@ -1,3 +1,5 @@
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const site = {
   name: "S.M. Hazrat Ali",
   shortName: "hazrat",
@@ -7,14 +9,14 @@ export const site = {
   description:
     "Frontend-focused Software Engineer building scalable fintech products with React, Next.js, TypeScript, Node.js, and modern web tooling.",
   // Replace with the deployed domain before publishing.
-  url: "http://localhost:3000",
+  url: "https://hazrat16.github.io/portfolio-hazrat",
   availability: "Online · Available for hire",
   email: "hazrat17016@gmail.com",
   phone: "+880 1521-334914",
   location: "Gazipur, Bangladesh",
-  resumeUrl: "/CV_Hazrat_Ali.pdf",
+  resumeUrl: `${basePath}/CV_Hazrat_Ali.pdf`,
   /** Drop a file in public/ and point here to replace the initials avatar. */
-  avatar: "/marayen-tong-avatar.jpg",
+  avatar: `${basePath}/marayen-tong-avatar.jpg`,
   tagline:
     "Building scalable fintech products with a focus on frontend performance, reusable systems, and clean architecture.",
   about:

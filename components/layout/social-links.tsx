@@ -12,7 +12,7 @@ const icons: Record<string, IconType> = {
 /** Glowing bordered buttons with hover tooltips, used in the hero. */
 export function SocialButtons() {
   return (
-    <div className="mt-8 flex items-center justify-center gap-4">
+    <div className="mt-8 flex items-center gap-4">
       {socials.map((social) => {
         const Icon = icons[social.icon];
         return (

@@ -9,7 +9,7 @@ import { engineeringHighlights } from "@/data/skills";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Professional and personal engineering work across fintech, recruitment, AI-assisted data tooling, healthcare scheduling, and real-time applications.",
+    "Professional and personal engineering work across fintech, billing, job search, AI-assisted data tooling, real-time apps, and AWS infrastructure.",
 };
 
 export default function ProjectsPage() {

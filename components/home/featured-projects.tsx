@@ -22,8 +22,8 @@ export function FeaturedProjects() {
               <span className="text-primary">made an impact</span>.
             </SectionTitle>
             <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground">
-              A collection of applications built with modern technologies,
-              focusing on user experience and scalable architecture.
+              Full-stack products with real-time features, tested APIs, and
+              CI/CD pipelines that deploy them to AWS.
             </p>
           </div>
 

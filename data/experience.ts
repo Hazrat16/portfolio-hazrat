@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
       "Built the proposal-to-invoice workflow: enquiry intake, project scoping, proposal generation, and milestone-based, multi-currency invoicing with PDF export.",
       "Built REST APIs with Mongoose, JWT, and Zod for enquiries, proposals, invoicing, authentication, and user management.",
       "Architected a domain-driven frontend (~450 TypeScript/React files) with vertical-slice modules and enforced import boundaries.",
-      "Added Microsoft Graph/MSAL single sign-on, role-based access, OTP invitations, and real-time Socket.IO notifications.",
+      "Added Microsoft Graph/MSAL single sign-on and automated data ingestion from Microsoft 365 mailboxes, plus role-based access, OTP invitations, and real-time Socket.IO notifications.",
       "Set up GitHub Actions CI/CD with lint, type-check, and build gates, tag-based staging-to-production promotion, multi-stage Docker builds, and Nginx deployments.",
     ],
   },

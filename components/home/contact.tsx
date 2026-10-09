@@ -29,9 +29,9 @@ export function Contact() {
           style={{ transitionDelay: "80ms" }}
           className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground"
         >
-          I&apos;m always interested in discussing new projects, creative ideas,
-          and collaborations. Feel free to reach out—I&apos;d love to hear from
-          you.
+          I&apos;m open to full-stack, frontend, and DevOps roles. I&apos;m
+          currently on a contract, so I can join immediately. Feel free to reach
+          out.
         </p>
 
         <div

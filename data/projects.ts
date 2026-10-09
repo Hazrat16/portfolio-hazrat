@@ -161,6 +161,7 @@ export const projects: Project[] = [
       "Built schema introspection, AST-based safety checks, and secure read-only execution against default or external databases.",
       "Integrated OpenAI and Ollama with an offline fallback for natural-language query generation.",
       "Created a Next.js workspace with results tables, a schema browser, and database connection management.",
+      "Runs locally with Docker, database migrations, and seeded datasets.",
     ],
     links: [{ label: "Code", href: "https://github.com/Hazrat16/ai-sql-assistant-frontend" }],
     featured: true,

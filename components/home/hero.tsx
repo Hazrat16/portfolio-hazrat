@@ -1,5 +1,5 @@
-import { Reveal } from "@/components/ui/reveal";
 import { SocialButtons } from "@/components/layout/social-links";
+import { Reveal } from "@/components/ui/reveal";
 import { heroIntro, site } from "@/data/site";
 
 export function Hero() {
@@ -19,16 +19,26 @@ export function Hero() {
         <h1
           data-reveal
           style={{ transitionDelay: "80ms" }}
-          className="mb-8 text-4xl leading-[1.2] font-bold tracking-tight md:text-5xl lg:text-6xl"
+          className="mb-4 text-4xl leading-[1.15] font-bold tracking-tight md:text-5xl lg:text-6xl"
         >
-          Hello{" "}
-          <span className="inline-block">
-            <span className="inline-block animate-wave">👋</span>
-          </span>{" "}
-          I&apos;m
-          <br />
-          <span className="text-gradient">&lt;{site.name} /&gt;</span>
+          Hi, I&apos;m <span className="text-gradient">{site.name}</span>
+          <span className="mt-3 block text-2xl leading-tight font-medium tracking-tight text-muted-foreground md:text-3xl lg:text-4xl">
+            Full-Stack Engineer
+          </span>
         </h1>
+
+        <p
+          data-reveal
+          style={{ transitionDelay: "120ms" }}
+          className="mb-8 text-lg font-medium text-foreground/80 md:text-xl"
+        >
+          {site.role}
+          <span className="text-muted-foreground">
+            {" "}
+            · React · Next.js · Node.js · TypeScript · AWS · Docker · CI/CD ·
+            Terraform · MongoDB · PostgreSQL
+          </span>
+        </p>
 
         <div data-reveal style={{ transitionDelay: "160ms" }} className="mb-4">
           <div className="mb-2 flex items-center gap-3">
@@ -45,7 +55,7 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-lg border border-primary/20 bg-background/40 backdrop-blur-sm">
             <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-primary/5 to-transparent" />
             <div className="relative p-4 md:p-6">
-              <p className="text-[13px] leading-relaxed text-muted-foreground sm:text-[14px]">
+              <p className="text-[13px] leading-relaxed whitespace-pre-line text-muted-foreground sm:text-[14px]">
                 {heroIntro.map((segment, index) => {
                   if (segment.style === "accent") {
                     return (
@@ -56,7 +66,10 @@ export function Hero() {
                   }
                   if (segment.style === "highlight") {
                     return (
-                      <span key={index} className="font-semibold text-foreground/90">
+                      <span
+                        key={index}
+                        className="font-semibold text-foreground/90"
+                      >
                         {segment.text}
                       </span>
                     );

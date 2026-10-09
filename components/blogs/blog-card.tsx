@@ -57,7 +57,7 @@ export function BlogCard({
           </span>
           {blog.url && (
             <span className="ml-auto flex items-center gap-1 font-medium text-primary/80">
-              Medium
+              {blog.source ?? "External"}
               <ArrowUpRight className="size-3.5" />
             </span>
           )}

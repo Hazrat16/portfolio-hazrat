@@ -10,8 +10,8 @@ export const metadata: Metadata = {
     "Notes on building products, infrastructure, and the debugging lessons in between, including posts from Medium.",
 };
 
-export default function BlogsPage() {
-  const blogs = getAllBlogs();
+export default async function BlogsPage() {
+  const blogs = await getAllBlogs();
 
   return (
     <div className="px-5 pt-28 pb-20">

@@ -3,7 +3,10 @@ import type { BlogMeta } from "@/lib/blogs";
 const medium = "https://ali-hazrat.medium.com";
 
 /** Posts published on Medium. They appear in the blog grid and link out to
- *  Medium instead of rendering a local page. */
+ *  Medium instead of rendering a local page. New posts are picked up from the
+ *  Medium feed at build time (lib/medium.ts), so this list only needs posts
+ *  that have dropped out of the feed's latest 10, or ones whose generated
+ *  description you want to replace. */
 export const mediumPosts: BlogMeta[] = [
   {
     slug: "how-i-deployed-smart-jobhub-on-aws",

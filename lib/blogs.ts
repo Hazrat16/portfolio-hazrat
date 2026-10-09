@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import GithubSlugger from "github-slugger";
-import { mediumPosts } from "@/data/medium";
+import { linkedinPosts } from "@/data/linkedin";
+import { getMediumPosts } from "@/lib/medium";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blogs");
 
@@ -21,8 +22,9 @@ export type BlogMeta = {
   readTime: string;
   topics: string[];
   cover?: string;
-  /** Set for posts hosted elsewhere (Medium); the card links straight there. */
+  /** Set for posts hosted elsewhere; the card links straight there. */
   url?: string;
+  source?: "Medium" | "LinkedIn";
 };
 
 export type Blog = BlogMeta & {
@@ -84,10 +86,13 @@ export function getBlogSlugs(): string[] {
     .map((file) => file.replace(/\.md$/, ""));
 }
 
-export function getAllBlogs(): BlogMeta[] {
+export async function getAllBlogs(): Promise<BlogMeta[]> {
   return getBlogSlugs()
     .map((slug) => readBlogFile(slug).meta)
-    .concat(mediumPosts)
+    .concat(
+      await getMediumPosts(),
+      linkedinPosts.map((post) => ({ ...post, source: "LinkedIn" as const })),
+    )
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 

@@ -48,14 +48,20 @@ export default function ResumePage() {
                 </p>
 
                 <div className="mt-4 grid w-full gap-2">
-                  <a
-                    href={site.resumeUrl}
-                    download="CV_Hazrat_Ali.pdf"
-                    className="group flex w-full items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/8 px-4 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:bg-primary/15"
-                  >
-                    <Download className="size-3.5 text-primary" />
+                  <p className="text-xs tracking-widest text-muted-foreground/60 uppercase">
                     Download CV
-                  </a>
+                  </p>
+                  {site.resumes.map((resume) => (
+                    <a
+                      key={resume.file}
+                      href={resume.href}
+                      download={resume.file}
+                      className="group flex w-full items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/8 px-4 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:bg-primary/15"
+                    >
+                      <Download className="size-3.5 text-primary" />
+                      {resume.label}
+                    </a>
+                  ))}
                 </div>
               </div>
 
@@ -80,7 +86,7 @@ export default function ResumePage() {
           <div data-reveal style={{ transitionDelay: "60ms" }}>
             <Panel label="Professional Experience">
               {experiences.map((item) => (
-                <PanelItem key={item.company}>
+                <PanelItem key={`${item.role}-${item.company}`}>
                   <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
                     <h3 className="text-base font-semibold">{item.role}</h3>
                     <span className="text-xs text-muted-foreground">

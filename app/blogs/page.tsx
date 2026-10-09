@@ -7,7 +7,7 @@ import { getAllBlogs } from "@/lib/blogs";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Notes on building products, architecture decisions, and tools I use day to day.",
+    "Notes on building products, infrastructure, and the debugging lessons in between, including posts from Medium.",
 };
 
 export default function BlogsPage() {
@@ -23,8 +23,17 @@ export default function BlogsPage() {
             <span className="text-primary">shares what I learn</span>.
           </h1>
           <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground">
-            Notes on building products, architecture decisions, and tools I use
-            day to day.
+            Notes on building products, infrastructure, and the debugging
+            lessons in between. More on{" "}
+            <a
+              href="https://ali-hazrat.medium.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-primary transition-colors hover:text-primary/80"
+            >
+              Medium
+            </a>
+            .
           </p>
         </div>
 

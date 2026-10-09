@@ -4,7 +4,7 @@ import type { Project } from "@/data/projects";
 
 function ProjectLinks({ links }: { links: Project["links"] }) {
   return (
-    <div className="flex shrink-0 items-center gap-3">
+    <div className="flex flex-wrap items-center justify-end gap-x-3 gap-y-1">
       {links.map((link) => (
         <a
           key={link.label}

@@ -4,30 +4,35 @@ export const site = {
   name: "S.M. Hazrat Ali",
   shortName: "hazrat",
   initials: "HA",
-  role: "Software Engineer",
-  title: "S.M. Hazrat Ali | Software Engineer",
+  role: "Full-Stack Engineer",
+  title: "S.M. Hazrat Ali | Full-Stack Engineer",
   description:
-    "Frontend-focused Software Engineer building scalable fintech products with React, Next.js, TypeScript, Node.js, and modern web tooling.",
+    "Full-stack engineer building React and TypeScript frontends, Node.js APIs, and the CI/CD and AWS infrastructure that ships them.",
   // Replace with the deployed domain before publishing.
   url: "https://hazrat16.github.io/portfolio-hazrat",
-  availability: "Online · Available for hire",
+  availability: "On contract · Available to join immediately",
   email: "hazrat17016@gmail.com",
   phone: "+880 1521-334914",
   location: "Gazipur, Bangladesh",
-  resumeUrl: `${basePath}/CV_Hazrat_Ali.pdf`,
+  /** One CV per role. The first entry is the primary download. */
+  resumes: [
+    { label: "Full-Stack", file: "CV_Hazrat_Ali_FullStack.pdf" },
+    { label: "Frontend", file: "CV_Hazrat_Ali_Frontend.pdf" },
+    { label: "DevOps", file: "CV_Hazrat_Ali_DevOps.pdf" },
+  ].map((resume) => ({ ...resume, href: `${basePath}/${resume.file}` })),
   /** Drop a file in public/ and point here to replace the initials avatar. */
   avatar: `${basePath}/marayen-tong-avatar.jpg`,
   tagline:
-    "Building scalable fintech products with a focus on frontend performance, reusable systems, and clean architecture.",
+    "Building fintech and billing products end to end, from fast React frontends to Node.js APIs and the pipelines that ship them.",
   about:
-    "Frontend-focused Software Engineer with 3+ years of experience building and scaling production fintech applications. I specialize in React, Next.js, TypeScript, Redux, and component-driven architecture, with hands-on backend experience using Node.js, Express, MongoDB, and PostgreSQL. At SmartCrowd, I have improved frontend load time by 30–45%, standardized 20+ reusable UI components, and led cross-functional delivery of high-impact investment features used by 10K+ active users.",
+    "Full-stack engineer with 3+ years of production experience in React, TypeScript, Node.js/Express, MongoDB, and Redis. I build REST and real-time APIs, fintech and billing workflows, and fast React frontends, and ship them with Docker, CI/CD, and AWS. I'm currently the primary engineer on PriceEstimator.ai at Firmwide, a project-fee estimation and billing platform. Before that, at SmartCrowd, I cut initial load time by 30–45%, built 20+ reusable components, and led delivery of fintech features used by 10K+ active users. I'm also moving deeper into DevOps, with hands-on Terraform, Kubernetes, Ansible, and AWS work. I'm on a contract, so I can join immediately.",
 } as const;
 
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Resume", href: "/resume" },
   { label: "Projects", href: "/projects" },
-  // { label: "Blogs", href: "/blogs" },
+  { label: "Blog", href: "/blogs" },
 ] as const;
 
 export const socials = [
@@ -41,12 +46,17 @@ export const socials = [
     href: "https://www.linkedin.com/in/smhazratali/",
     icon: "linkedin",
   },
+  {
+    label: "Medium",
+    href: "https://ali-hazrat.medium.com/",
+    icon: "medium",
+  },
 ] as const;
 
 /** Hero intro rendered inside the `about.md` terminal card. Segment styles map
  *  to the comment / plain / highlighted tokens of a source file. */
 export const heroIntro: { text: string; style?: "accent" | "highlight" }[] = [
-  { text: "Hello! I'm a frontend-focused Software Engineer", style: "accent" },
+  { text: "Hello! I'm a full-stack engineer", style: "accent" },
   { text: " specializing in " },
   { text: "React", style: "highlight" },
   { text: ", " },
@@ -54,12 +64,14 @@ export const heroIntro: { text: string; style?: "accent" | "highlight" }[] = [
   { text: ", " },
   { text: "TypeScript", style: "highlight" },
   {
-    text: ", and Redux, building scalable fintech products used by 10K+ active users. I focus on frontend architecture, reusable design systems, and performance optimization, with backend experience using ",
+    text: " on the frontend and ",
   },
   { text: "Node.js", style: "highlight" },
   { text: ", Express, " },
   { text: "MongoDB", style: "highlight" },
-  { text: ", " },
-  { text: "PostgreSQL", style: "highlight" },
-  { text: ", and CI/CD tooling." },
+  { text: " and Redis on the backend. I've built fintech and billing products used by 10K+ active users, and I ship them with Docker, GitHub Actions, " },
+  { text: "Terraform", style: "highlight" },
+  { text: " and " },
+  { text: "AWS", style: "highlight" },
+  { text: "." },
 ];

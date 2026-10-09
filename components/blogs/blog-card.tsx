@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarDays, Clock } from "lucide-react";
+import { ArrowUpRight, CalendarDays, Clock } from "lucide-react";
 import { BlogCover } from "@/components/blogs/blog-cover";
 import { TopicTag } from "@/components/ui/primitives";
 import { formatDate, type BlogMeta } from "@/lib/blogs";
@@ -11,11 +11,11 @@ export function BlogCard({
   blog: BlogMeta;
   priority?: boolean;
 }) {
-  return (
-    <Link
-      href={`/blogs/${blog.slug}`}
-      className="group flex h-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card/40 backdrop-blur-[2px] transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_12px_40px_-12px_hsl(160_84%_39%/0.25)]"
-    >
+  const className =
+    "group flex h-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card/40 backdrop-blur-[2px] transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_12px_40px_-12px_hsl(160_84%_39%/0.25)]";
+
+  const content = (
+    <>
       <div className="aspect-video overflow-hidden border-b border-border/40">
         <BlogCover blog={blog} priority={priority} />
       </div>
@@ -55,8 +55,33 @@ export function BlogCard({
             <Clock className="size-3.5 text-primary/60" />
             {blog.readTime}
           </span>
+          {blog.url && (
+            <span className="ml-auto flex items-center gap-1 font-medium text-primary/80">
+              Medium
+              <ArrowUpRight className="size-3.5" />
+            </span>
+          )}
         </div>
       </div>
+    </>
+  );
+
+  if (blog.url) {
+    return (
+      <a
+        href={blog.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={`/blogs/${blog.slug}`} className={className}>
+      {content}
     </Link>
   );
 }

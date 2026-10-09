@@ -1,10 +1,11 @@
 import type { IconType } from "react-icons";
-import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn, FaMedium, FaXTwitter } from "react-icons/fa6";
 import { socials } from "@/data/site";
 
 const icons: Record<string, IconType> = {
   github: FaGithub,
   linkedin: FaLinkedinIn,
+  medium: FaMedium,
   twitter: FaXTwitter,
 };
 

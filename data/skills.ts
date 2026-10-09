@@ -5,31 +5,53 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Programming Languages",
-    items: ["JavaScript", "TypeScript", "C", "C++"],
+    title: "Languages",
+    items: ["TypeScript", "JavaScript", "HTML", "CSS", "Bash"],
   },
   {
     title: "Frontend",
-    items: ["React", "Next.js", "Redux", "Tailwind CSS", "Chakra UI", "Material UI"],
+    items: [
+      "React",
+      "Next.js",
+      "Vite",
+      "Redux Toolkit",
+      "TanStack Query",
+      "React Hook Form",
+      "Tailwind CSS",
+      "Radix UI",
+      "Material UI",
+    ],
   },
   {
     title: "Backend",
-    items: ["Node.js", "Express.js", "Fastify"],
+    items: ["Node.js", "Express", "NestJS", "Fastify", "Socket.IO", "Zod"],
   },
   {
     title: "Databases",
-    items: ["MongoDB", "PostgreSQL", "MySQL"],
+    items: ["MongoDB", "PostgreSQL", "Redis", "Prisma"],
   },
   {
-    title: "DevOps & Tools",
-    items: ["Git", "GitHub Actions", "Docker", "Postman", "Sentry"],
+    title: "DevOps & Cloud",
+    items: [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Ansible",
+      "GitHub Actions",
+      "Nginx",
+    ],
+  },
+  {
+    title: "Testing & Tools",
+    items: ["Vitest", "Sentry", "Grafana", "Git", "Postman"],
   },
 ];
 
 export const engineeringHighlights = [
-  "3+ years building production fintech products",
+  "3+ years building production fintech and billing products",
   "30–45% faster initial frontend load time",
-  "20+ standardized reusable UI components",
-  "React, Next.js & TypeScript architecture",
-  "Node.js APIs, databases & CI/CD workflows",
+  "25–35% faster API responses through query and caching work",
+  "20+ reusable UI components across product teams",
+  "Terraform, ECS, and GitHub Actions deployments on AWS",
 ];

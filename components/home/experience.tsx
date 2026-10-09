@@ -20,7 +20,7 @@ export function ExperienceSection() {
         <div className="relative space-y-12 border-l-2 border-border pl-8">
           {experiences.map((item, index) => (
             <div
-              key={item.company}
+              key={`${item.role}-${item.company}`}
               data-reveal="left"
               style={{ transitionDelay: `${index * 120}ms` }}
               className="relative"

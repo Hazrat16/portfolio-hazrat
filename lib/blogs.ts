@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import GithubSlugger from "github-slugger";
+import { mediumPosts } from "@/data/medium";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blogs");
 
@@ -20,6 +21,8 @@ export type BlogMeta = {
   readTime: string;
   topics: string[];
   cover?: string;
+  /** Set for posts hosted elsewhere (Medium); the card links straight there. */
+  url?: string;
 };
 
 export type Blog = BlogMeta & {
@@ -84,6 +87,7 @@ export function getBlogSlugs(): string[] {
 export function getAllBlogs(): BlogMeta[] {
   return getBlogSlugs()
     .map((slug) => readBlogFile(slug).meta)
+    .concat(mediumPosts)
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 

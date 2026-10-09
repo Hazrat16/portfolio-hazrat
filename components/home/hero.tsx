@@ -22,9 +22,7 @@ export function Hero() {
           className="mb-4 text-4xl leading-[1.15] font-bold tracking-tight md:text-5xl lg:text-6xl"
         >
           Hi, I&apos;m <span className="text-gradient">{site.name}</span>
-          <span className="mt-3 block text-2xl leading-tight font-medium tracking-tight text-muted-foreground md:text-3xl lg:text-4xl">
-            Full-Stack Engineer
-          </span>
+          <span className="mt-3 block text-2xl leading-tight font-medium tracking-tight text-muted-foreground md:text-3xl lg:text-4xl"></span>
         </h1>
 
         <p

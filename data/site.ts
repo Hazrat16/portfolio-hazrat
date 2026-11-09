@@ -7,7 +7,7 @@ export const site = {
   role: "Full-Stack Engineer",
   title: "S.M. Hazrat Ali | Full-Stack Engineer",
   description:
-    "Full-stack engineer building React and TypeScript frontends, Node.js APIs, and the CI/CD and AWS infrastructure that ships them.",
+    "Full-stack engineer with 4 years of production experience building React and TypeScript frontends, Node.js APIs, and the CI/CD and AWS infrastructure that ships them, using agentic coding tools like Claude Code and Cursor.",
   // Replace with the deployed domain before publishing.
   url: "https://hazrat16.github.io/portfolio-hazrat",
   availability: "Available to join immediately",
@@ -25,7 +25,7 @@ export const site = {
   tagline:
     "Building fintech and billing products end to end, from fast React frontends to Node.js APIs and the pipelines that ship them.",
   about:
-    "Full-stack engineer with nearly 4 years of experience building, deploying, and maintaining production web applications end to end - from frontend development and backend architecture to cloud infrastructure and deployment automation. I build responsive interfaces with React, Next.js, and TypeScript; design REST APIs, real-time services, and backend systems with Node.js, Express, MongoDB, and Redis; and take applications to production using Docker, GitHub Actions, Terraform, and AWS. I also work with Kubernetes and Ansible to automate deployments, manage infrastructure, and support reliable production environments. At Firmwide, I'm the primary engineer on PriceEstimator.ai, a project-fee estimation and billing platform. Previously, at SmartCrowd, I contributed to fintech applications and production features used by thousands of users. I focus on building complete, maintainable solutions and owning the entire delivery lifecycle — from the first commit to cloud deployment and ongoing production support. Currently on a contract and available to join immediately.",
+    "Full-stack engineer with 4 years of production experience building fintech and billing platforms with React/Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, and Redis, plus over a year of hands-on DevOps work with Docker, Kubernetes (EKS), Terraform, Ansible, Jenkins, GitHub Actions, and AWS. At Firmwide, I'm the primary engineer on PriceEstimator.ai, a project-fee estimation and billing platform. Before that, at SmartCrowd, I built React/Redux fintech features for 10K+ active users, cut initial load time by 30–45%, and led delivery of the Share Transfer Facility. I build mainly with agentic coding tools (Claude Code, Cursor): I write scoped specs, run parallel agents across backend and frontend work, and review, test, and debug their output before it ships, while personally reviewing all auth, billing, and payment code. Currently on a contract and available to join immediately.",
 } as const;
 
 export const navLinks = [
@@ -68,7 +68,8 @@ export const heroIntro: { text: string; style?: "accent" | "highlight" }[] = [
   { text: "; develop APIs and real-time services with " },
   { text: "Node.js", style: "highlight" },
   { text: " and Express; and build reliable backend systems with " },
-  { text: "MongoDB, ", style: "highlight" },
+  { text: "MongoDB", style: "highlight" },
+  { text: ", " },
   { text: "PostgreSQL", style: "highlight" },
   { text: " and " },
   { text: "Redis", style: "highlight" },
@@ -82,6 +83,13 @@ export const heroIntro: { text: string; style?: "accent" | "highlight" }[] = [
   { text: "AWS", style: "highlight" },
   {
     text: " from deployment automation and cloud infrastructure to reliable releases.",
+  },
+  { text: "\nI build mainly with " },
+  { text: "Claude Code", style: "highlight" },
+  { text: " and " },
+  { text: "Cursor", style: "highlight" },
+  {
+    text: ": scoped specs, parallel agents, and line-by-line review and testing before anything ships.",
   },
   {
     text: "\nCurrently on a contract and available to transition into a new role immediately.",

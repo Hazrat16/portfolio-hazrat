@@ -1,4 +1,5 @@
 import type { IconType } from "react-icons";
+import { BsOpenai } from "react-icons/bs";
 import { FaAws } from "react-icons/fa6";
 import {
   SiAnsible,
@@ -41,6 +42,15 @@ import {
   SiVite,
   SiVitest,
   SiZod,
+  SiClaude,
+  SiCursor,
+  SiEslint,
+  SiJenkins,
+  SiOllama,
+  SiPrometheus,
+  SiShadcnui,
+  SiTestinglibrary,
+  SiTrivy,
 } from "react-icons/si";
 
 const iconMap: Record<string, { Icon: IconType; color: string }> = {
@@ -88,6 +98,16 @@ const iconMap: Record<string, { Icon: IconType; color: string }> = {
   Nginx: { Icon: SiNginx, color: "#009639" },
   Vitest: { Icon: SiVitest, color: "#6E9F18" },
   Grafana: { Icon: SiGrafana, color: "#F46800" },
+  "Claude Code": { Icon: SiClaude, color: "#D97757" },
+  Cursor: { Icon: SiCursor, color: "#E5E7EB" },
+  OpenAI: { Icon: BsOpenai, color: "#E5E7EB" },
+  Ollama: { Icon: SiOllama, color: "#E5E7EB" },
+  "shadcn/ui": { Icon: SiShadcnui, color: "#E5E7EB" },
+  Jenkins: { Icon: SiJenkins, color: "#D24939" },
+  "Testing Library": { Icon: SiTestinglibrary, color: "#E33332" },
+  ESLint: { Icon: SiEslint, color: "#4B32C3" },
+  Trivy: { Icon: SiTrivy, color: "#1904DA" },
+  Prometheus: { Icon: SiPrometheus, color: "#E6522C" },
 };
 
 export function TechIcon({ name }: { name: string }) {

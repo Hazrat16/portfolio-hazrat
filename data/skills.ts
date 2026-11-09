@@ -5,6 +5,10 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   {
+    title: "AI Tooling",
+    items: ["Claude Code", "Cursor", "OpenAI", "Ollama"],
+  },
+  {
     title: "Languages",
     items: ["TypeScript", "JavaScript", "HTML", "CSS", "Bash"],
   },
@@ -18,6 +22,7 @@ export const skillGroups: SkillGroup[] = [
       "TanStack Query",
       "React Hook Form",
       "Tailwind CSS",
+      "shadcn/ui",
       "Radix UI",
       "Material UI",
     ],
@@ -28,7 +33,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "Databases",
-    items: ["MongoDB", "PostgreSQL", "Redis", "Prisma"],
+    items: ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Prisma"],
   },
   {
     title: "DevOps & Cloud",
@@ -39,19 +44,30 @@ export const skillGroups: SkillGroup[] = [
       "Terraform",
       "Ansible",
       "GitHub Actions",
+      "Jenkins",
       "Nginx",
     ],
   },
   {
-    title: "Testing & Tools",
-    items: ["Vitest", "Sentry", "Grafana", "Git", "Postman"],
+    title: "Testing & Observability",
+    items: [
+      "Vitest",
+      "Testing Library",
+      "ESLint",
+      "Trivy",
+      "Sentry",
+      "Prometheus",
+      "Grafana",
+      "Git",
+      "Postman",
+    ],
   },
 ];
 
 export const engineeringHighlights = [
-  "3+ years building production fintech and billing products",
+  "4 years building production fintech and billing products",
   "30–45% faster initial frontend load time",
-  "25–35% faster API responses through query and caching work",
   "20+ reusable UI components across product teams",
-  "Terraform, ECS, and GitHub Actions deployments on AWS",
+  "Terraform, ECS, EKS, and GitHub Actions deployments on AWS",
+  "Agentic workflow with Claude Code and Cursor, with every change reviewed and tested",
 ];
